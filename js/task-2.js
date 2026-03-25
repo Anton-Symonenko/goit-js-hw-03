@@ -1,12 +1,16 @@
 function makeArray(firstArray, secondArray, maxLength) {
     const newArray = [];
-    for (let iFa = 0; iFa <= firstArray.length; iFa++) {
-        if (iFa.length <= maxLength)
+    for (let iFa = 0; iFa < firstArray.length; iFa++) {
         { newArray.push(firstArray[iFa]) }
     }
-    return newArray; 
-    
-
+    for (let iSa = 0; iSa < secondArray.length; iSa++) {
+        { newArray.push(secondArray[iSa]) }
+    }
+    if (newArray.length > maxLength) {
+        return newArray.slice(0, maxLength)
+    } else{
+        return newArray;
+    }
     }
 
 
